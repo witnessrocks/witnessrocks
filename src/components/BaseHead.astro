@@ -45,3 +45,17 @@ const { title, description, image = "/blog-placeholder-1.avif" } = Astro.props;
 <script>
   import "preline/dist/preline.js";
 </script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G5LL6WFG24"
+></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-G5LL6WFG24");
+</script>
+<!-- google anylystic end -->
