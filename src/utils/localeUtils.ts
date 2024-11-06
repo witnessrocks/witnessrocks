@@ -29,4 +29,3 @@ export function getSupportedLanguages(): string[] {
 export function getLanguageNames(): Record<string, string> {
   return languageNames;
 }
-

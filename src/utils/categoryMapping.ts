@@ -1,17 +1,15 @@
 type CategoryMap = Record<string, string>;
 
 const zhCategories: CategoryMap = {
+  初信: "new_believer",
   生活: "life",
   关于我们: "aboutus",
-  地支: "invest",
-  五行: "build",
 };
 
 const enCategories: CategoryMap = {
+  new_believer: "new_believer",
   life: "life",
   aboutus: "aboutus",
-  invest: "invest",
-  build: "build",
 };
 
 const categoryMappings: Record<string, CategoryMap> = {

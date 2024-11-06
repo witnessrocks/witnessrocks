@@ -71,6 +71,7 @@ const currentLocale = "zh";
 const localizedTag = getTagByLanguage(tag, "en", "zh");
 const { title, description } = getTagMetadata(localizedTag, currentLocale);
 ---
+
 <BaseLayout title={title} description={description}>
   <TagsSchema tag={localizedTag} page={page} locale="zh" />
   <h1 class="sr-only">标签 "{localizedTag}" 下的所有文章</h1>
@@ -84,16 +85,12 @@ const { title, description } = getTagMetadata(localizedTag, currentLocale);
     <Pagination
       currentPage={page.currentPage}
       lastPage={page.lastPage}
-      urlPrev={
-        page.currentPage > 1
-          ? `/zh/tags/${tag}/${page.currentPage - 1}`
-          : null
-      }
-      urlNext={
-        page.currentPage < page.lastPage
-          ? `/zh/tags/${tag}/${page.currentPage + 1}`
-          : null
-      }
+      urlPrev={page.currentPage > 1
+        ? `/zh/tags/${tag}/${page.currentPage - 1}`
+        : null}
+      urlNext={page.currentPage < page.lastPage
+        ? `/zh/tags/${tag}/${page.currentPage + 1}`
+        : null}
       basePath={`/zh/tags/${tag}`}
       maxDisplayedPages={5}
     />

@@ -1,10 +1,10 @@
 export const navData = [
   {
-    text: "Life",
-    href: "/category/life/1/",
+    text: "New",
+    href: "/category/new_believer/1/",
   },
   {
     text: "Vision",
-    href: "/category/aboutus/1/",
+    href: "/about/",
   },
 ];
