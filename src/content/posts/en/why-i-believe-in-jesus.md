@@ -1,6 +1,6 @@
 ---
-title: 我为什么信耶稣
-description: 回来之后其实我也没记得那个传道人都是讲了什么内容，只记得他说，你认罪悔改，神就饶恕你的罪。
+title: Why I Believe In Jesus
+description: No one in our village believed in Jesus at that time, and I thought to myself, “Since there’s no other hope, why not give it a try?”
 category:
   - new_believer
 tags:
