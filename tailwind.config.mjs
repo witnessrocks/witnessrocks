@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 export default {
   darkMode: "class",
   content: [
@@ -13,7 +12,10 @@ export default {
         "BlinkMacSystemFont",
         "Segoe UI",
         "Roboto",
-        "Helvetica",
+        "Oxygen-Sans",
+        "Ubuntu",
+        "Cantarell",
+        "Helvetica Neue",
         "Arial",
         "sans-serif",
       ],

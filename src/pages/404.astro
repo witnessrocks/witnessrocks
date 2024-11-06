@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-import { Icon } from "astro-icon/components";
 
 const title = `Error 404`;
 const description = `Error 404`;
@@ -23,12 +22,21 @@ const description = `Error 404`;
       <div
         class="mt-5 flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-3"
       >
-        <a
-          class="inline-flex w-full items-center justify-center gap-x-2 rounded-lg border border-transparent bg-neutral-400 px-4 py-3 text-sm font-semibold text-white hover:bg-neutral-600 disabled:pointer-events-none disabled:opacity-50 sm:w-auto"
-          href="/"
-        >
-          <Icon name="tabler:chevron-left" class="icon-base" />
-          Back to homepage
+        <a href="/en/" class="inline-block">
+          <button
+            type="button"
+            class="inline-flex items-center gap-x-2 rounded-lg border border-transparent bg-gray-100 px-4 py-3 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 dark:hover:text-white dark:focus:bg-white/20 dark:focus:text-white"
+          >
+            English
+          </button>
+        </a>
+        <a href="/zh/" class="inline-block">
+          <button
+            type="button"
+            class="inline-flex items-center gap-x-2 rounded-lg border border-transparent bg-gray-100 px-4 py-3 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 dark:hover:text-white dark:focus:bg-white/20 dark:focus:text-white"
+          >
+            中文
+          </button>
         </a>
       </div>
     </div>

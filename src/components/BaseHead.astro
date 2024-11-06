@@ -1,50 +1,161 @@
 ---
+import MetaSEO from "@seo/MetaSEO.astro";
+import GlobalSchema from "@seo/GlobalSchema.astro";
+import { getCurrentLocale, getBrandName } from "@utils/localeUtils";
+import type { SupportedLocale } from "@consts";
+
 interface Props {
   title: string;
   description: string;
   image?: string;
+  canonical?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
+  charset?: string;
+  languageAlternates?: Array<{ href: string; hrefLang: string }>;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const {
+  title,
+  description,
+  image,
+  canonical,
+  noindex = false,
+  nofollow = false,
+  charset = "UTF-8",
+  languageAlternates = [],
+} = Astro.props;
 
-const { title, description, image = "/blog-placeholder-1.avif" } = Astro.props;
+const currentLocale: SupportedLocale = getCurrentLocale(Astro.url.pathname);
+const brandName = getBrandName(currentLocale);
+
+const formattedTitle = title.includes(brandName)
+  ? title
+  : `${title} | ${brandName}`;
+
+const canonicalURL =
+  canonical || new URL(Astro.url.pathname, Astro.site).toString();
+
+function getAlternateLocaleUrl(targetLocale: string): string {
+  const pathParts = Astro.url.pathname.split("/").filter(Boolean);
+  if (pathParts[0] === currentLocale) {
+    pathParts[0] = targetLocale;
+  } else if (pathParts[0] === "posts" && pathParts.length >= 3) {
+    pathParts[1] = targetLocale;
+  } else {
+    pathParts.unshift(targetLocale);
+  }
+  return new URL("/" + pathParts.join("/"), Astro.site).toString();
+}
+
+const supportedLocales: string[] = ["zh", "en", "es"];
+
+const alternateUrls: Record<string, string> = supportedLocales.reduce(
+  (acc: Record<string, string>, locale: string) => {
+    acc[locale] = getAlternateLocaleUrl(locale);
+    return acc;
+  },
+  {},
+);
+
+const localeAlternateMap: Record<string, string> = {
+  zh: "zh_CN",
+  en: "en_US",
+};
+
+const localeAlternate: string[] = supportedLocales.map(
+  (locale: string) => localeAlternateMap[locale],
+);
+
+const defaultImage = new URL("/favicon.ico", Astro.site).toString();
 ---
 
-<!-- Global Metadata -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<meta name="generator" content={Astro.generator} />
+<meta charset={charset} />
 
-<!-- Canonical URL -->
-<link rel="canonical" href={canonicalURL} />
+<GlobalSchema />
 
-<!-- Sitemap -->
-<link rel="sitemap" href="/sitemap-index.xml" />
+<MetaSEO
+  title={formattedTitle}
+  description={description}
+  canonical={canonicalURL}
+  noindex={noindex}
+  nofollow={nofollow}
+  charset={charset}
+  languageAlternates={[
+    ...languageAlternates,
+    ...supportedLocales.map((locale) => ({
+      href: alternateUrls[locale],
+      hrefLang: locale,
+    })),
+  ]}
+  openGraph={{
+    basic: {
+      title: formattedTitle,
+      type: "website",
+      image: image ? new URL(image, Astro.site).toString() : defaultImage,
+      url: canonicalURL,
+    },
+    optional: {
+      siteName: brandName,
+      locale: localeAlternateMap[currentLocale] || currentLocale,
+      description: description,
+    },
+  }}
+  twitter={{
+    card: "summary_large_image",
+    site: "@realDonaldTrump",
+    creator: "@realDonaldTrump",
+    title: formattedTitle,
+    description: description,
+    image: image ? new URL(image, Astro.site).toString() : defaultImage,
+    imageAlt: `${brandName} - ${title}`,
+  }}
+  extend={{
+    link: [
+      { rel: "icon", href: "/favicon.ico" },
+      { rel: "sitemap", href: "/sitemap-index.xml" },
+      ...languageAlternates.map(({ href, hrefLang }) => ({
+        rel: "alternate",
+        href,
+        hreflang: hrefLang,
+      })),
+    ],
+    meta: [
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "generator", content: Astro.generator },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: canonicalURL },
+      { property: "og:title", content: formattedTitle },
+      { property: "og:description", content: description },
+      {
+        property: "og:image",
+        content: image ? new URL(image, Astro.site).href : defaultImage,
+      },
+      { property: "twitter:card", content: "summary_large_image" },
+      { property: "twitter:url", content: canonicalURL },
+      { property: "twitter:title", content: formattedTitle },
+      { property: "twitter:description", content: description },
+      {
+        property: "twitter:image",
+        content: image ? new URL(image, Astro.site).href : defaultImage,
+      },
+    ],
+  }}
+  currentLocale={localeAlternateMap[currentLocale] || currentLocale}
+  localeAlternate={localeAlternate}
+  defaultImage={defaultImage}
+/>
 
-<!-- Primary Meta Tags -->
-<title>{title}</title>
-<meta name="title" content={title} />
-<meta name="description" content={description} />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
-
-<!-- Preline CSS -->
-<script>
-  import "preline/dist/preline.js";
-</script>
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title={brandName}
+  href={new URL("rss.xml", Astro.site)}
+  />
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G5LL6WFG24"

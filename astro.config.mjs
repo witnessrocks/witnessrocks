@@ -1,25 +1,25 @@
 import { defineConfig } from "astro/config";
 import { remarkModifiedTime } from "./src/utils/remark-modified-time.mjs";
-import mdx from "@astrojs/mdx";
-import sitemap from "@astrojs/sitemap";
-import partytown from "@astrojs/partytown";
 import pagefind from "astro-pagefind";
 import icon from "astro-icon";
 import tailwind from "@astrojs/tailwind";
+import mdx from "@astrojs/mdx";
+import rehypeExternalLinks from "rehype-external-links";
+import partytown from "@astrojs/partytown";
+import sitemap from "@astrojs/sitemap";
 
-// https://astro.build/config
 export default defineConfig({
-  site: "https://witness.rocks/",
+  site: "https://witness.rocks",
   trailingSlash: "always",
-  prefetch: {
-    prefetchAll: true,
-    defaultStrategy: "viewport",
+  prefetch: true,
+  i18n: {
+    defaultLocale: "en",
+    locales: ["zh", "en"],
+    routing: {
+      prefixDefaultLocale: true,
+      redirectToDefaultLocale: false,
+    },
   },
-
-  experimental: {
-    contentCollectionCache: true,
-  },
-
   image: {
     remotePatterns: [
       {
@@ -28,28 +28,44 @@ export default defineConfig({
       },
     ],
   },
-
   markdown: {
     remarkPlugins: [remarkModifiedTime],
+    rehypePlugins: [
+      [
+        rehypeExternalLinks,
+        {
+          content: { type: "text", value: " ↗" },
+        },
+      ],
+    ],
   },
-
   integrations: [
-    mdx(),
-    sitemap(),
-    pagefind(),
-    tailwind(),
-
-    partytown({
-      config: {
-        forward: ["dataLayer.push"],
-        debug: false,
+    sitemap({
+      i18n: {
+        defaultLocale: "en",
+        locales: {
+          en: "en-US",
+          zh: "zh-CN",
+        },
       },
     }),
-
+    mdx(),
+    pagefind(),
+    tailwind(),
     icon({
       include: {
         tabler: ["*"],
+        mdi: ["*"],
+        "material-symbols": ["*"],
+        flagpack: ["*"],
+        "flat-color-icons": ["*"],
+      },
+    }),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
       },
     }),
   ],
 });
+

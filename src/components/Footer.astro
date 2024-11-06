@@ -1,55 +1,80 @@
 ---
 import { Icon } from "astro-icon/components";
-import Link from "@components/Links.astro";
-import { BRAND_NAME, FooterLinks, SocialLinks } from "@consts";
+import FooterLinks from "@components/FooterLinks.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getCurrentLocale, getBrandName } from "@utils/localeUtils";
+import { type SupportedLocale } from "@consts";
+
+const currentLocale = getCurrentLocale(Astro.url.pathname) as SupportedLocale;
+const brandName = getBrandName(currentLocale);
+
+let footerNavData;
+switch (currentLocale) {
+  case "zh":
+    footerNavData = await import("@utils/zh/footernav");
+    break;
+  default:
+    footerNavData = await import("@utils/en/footernav");
+    break;
+}
+
 const today = new Date();
+
+const safeGetRelativeLocaleUrl = (path: string) =>
+  path.startsWith("https") ? path : getRelativeLocaleUrl(currentLocale, path);
 ---
 
-<footer class="mx-auto mt-auto w-full max-w-[85rem] py-10">
-  <nav class="mx-auto w-full max-w-[85rem] px-4" aria-label="Footer">
-    <div class="flex flex-col items-center sm:flex-row sm:justify-between">
-      <div id="navbar-alignment" class="internal-links sm:order-2">
-        <div
-          class="mt-2 flex flex-row gap-5 sm:mt-0 sm:flex-row sm:items-center sm:ps-5"
+<footer class="mt-auto w-full max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8">
+  <div
+    class="mb-10 grid grid-cols-2 gap-6 border-t border-neutral-200 pt-5 dark:border-neutral-700 md:grid-cols-4 lg:grid-cols-5"
+  >
+    <div class="col-span-full hidden lg:col-span-1 lg:block">
+      <a
+        class="flex-none text-xl font-semibold dark:text-white"
+        href="#"
+        aria-label="Brand">{brandName}</a
+      >
+    </div>
+
+    {
+      footerNavData.footerNav.map((nav, i) => (
+        <div>
+          <h3 class="text-medium font-semibold uppercase text-neutral-900 dark:text-neutral-100">
+            {nav.title}
+          </h3>
+          <div class="mt-3 grid space-y-3 text-sm">
+            {nav.items.map((item) => (
+              <FooterLinks href={safeGetRelativeLocaleUrl(item.href)}>
+                {item.text}
+              </FooterLinks>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="mt-5 border-t border-neutral-200 pt-5 dark:border-neutral-700">
+    <div
+      class="flex flex-col sm:flex-row sm:flex-nowrap sm:items-center sm:justify-between"
+    >
+      <div class="flex w-full items-center justify-between">
+        <a
+          class="text-sm text-neutral-600 dark:text-neutral-400"
+          href={safeGetRelativeLocaleUrl("/")}
+          aria-label="Witness.Rocks">{brandName} &copy; {today.getFullYear()}</a
         >
-          {
-            FooterLinks.map((link) => (
-              <Link
-                href={link.href}
-                class="inline-flex gap-x-2 text-sm text-neutral-500 hover:text-neutral-800 dark:text-neutral-500 dark:hover:text-neutral-200"
-              >
-                {link.title}
-              </Link>
-            ))
-          }
+
+        <div class="flex items-center space-x-4 text-sm">
+          <a
+            class="inline-block text-neutral-500 hover:text-neutral-800 dark:text-neutral-500 dark:hover:text-neutral-200"
+            href={safeGetRelativeLocaleUrl("rss.xml")}
+            aria-label="RSS"
+          >
+            <Icon name="tabler:rss" class="h-auto w-5" />
+          </a>
         </div>
       </div>
-
-      <div class="mt-2 flex flex-wrap gap-2 sm:order-3 sm:mb-0 sm:gap-0">
-        {
-          SocialLinks.map((link) => (
-            <button
-              type="button"
-              class="relative inline-flex h-12 w-12 items-center gap-x-2 bg-white px-4 py-3 text-neutral-500 hover:text-neutral-800 disabled:pointer-events-none disabled:opacity-50 dark:bg-neutral-900 dark:text-neutral-500 dark:hover:bg-neutral-900 dark:hover:text-neutral-200"
-            >
-              <a
-                href={link.href}
-                class="absolute inset-0 z-10"
-                aria-label={link.label}
-              />
-              <Icon name={link.icon} class="icon-base" />
-            </button>
-          ))
-        }
-      </div>
-
-      <div class="mt-2 sm:order-1 sm:mb-0">
-        <a
-          class="flex-none text-sm text-neutral-500 hover:text-neutral-800 dark:text-neutral-500 dark:hover:text-neutral-200"
-          href="/"
-          aria-label="Brand">{BRAND_NAME} &copy; {today.getFullYear()}</a
-        >
-      </div>
     </div>
-  </nav>
+  </div>
 </footer>

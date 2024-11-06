@@ -1,0 +1,101 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { Icon } from "astro-icon/components";
+import LatestPosts from "@components/LatestPosts.astro";
+import { getConstants } from "@consts";
+
+const currentLocale = "zh";
+const constants = getConstants(currentLocale);
+
+const title = `${constants.SITE_TITLE}-作者`;
+const description = constants.SITE_DESCRIPTION;
+---
+
+<BaseLayout title={title} description={description}>
+  <h1 class="sr-only">{constants.SITE_TITLE} 作者</h1>
+  <main id="content">
+    <div class="mx-auto w-full max-w-2xl px-4 pt-10 sm:px-6 md:pt-16 lg:px-8">
+      <div class="flex items-center gap-x-3">
+        <div class="shrink-0">
+          <a href="/zh/" aria-label="返回首页">
+            <img
+              class="h-16 w-16 shrink-0 rounded-full"
+              src="/witness_logo.avif"
+              alt="Witness.Rocks"
+              loading="lazy"
+            />
+          </a>
+        </div>
+        <div class="grow">
+          <h2 class="text-lg font-medium text-gray-800 dark:text-neutral-200">
+            磐石见证
+          </h2>
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            主的恩典够我用的。
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8">
+        <p class="text-sm text-gray-600 dark:text-neutral-400">
+          为这些事作见证，并且记载这些事的就是这门徒；我们也知道他的见证是真的。
+          耶稣所行的事还有许多，若是一一地都写出来，我想，所写的书就是世界也容不下了。
+          <p class="float-end text-sm text-gray-600 dark:text-neutral-400">
+            约翰福音21:24-25
+          </p>
+        </p>
+        <ul class="mt-5 flex flex-col gap-y-3">
+          <li class="flex items-center gap-x-2.5">
+            <div class="flex items-center text-gray-500 dark:text-gray-400">
+              <Icon name="tabler:mail" class="icon-base" />
+            </div>
+            <a
+              class="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:decoration-2 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200"
+              href="#"
+            >
+              witnessrocks.app@gmail.com
+            </a>
+          </li>
+
+          <li class="flex items-center gap-x-2.5">
+            <div class="flex items-center text-gray-500 dark:text-gray-400">
+              <Icon name="tabler:brand-x" class="icon-base" />
+            </div>
+            <a
+              class="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:decoration-2 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200"
+              href="#"
+            >
+              @realDonaaldTrump
+            </a>
+          </li>
+
+          <li class="flex items-center gap-x-2.5">
+            <div class="flex items-center text-gray-500 dark:text-gray-400">
+              <Icon name="tabler:brand-github" class="icon-base" />
+            </div>
+            <a
+              class="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:decoration-2 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200"
+              href="#"
+            >
+              https://witness.rocks
+            </a>
+          </li>
+
+          <li class="flex items-center gap-x-2.5">
+            <div class="flex items-center text-gray-500 dark:text-gray-400">
+              <Icon name="tabler:world-www" class="icon-base" />
+            </div>
+            <a
+              class="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:decoration-2 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200"
+              href="#"
+            >
+              https://witness.rocks
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <h2 class="sr-only">最新文章</h2>
+  <LatestPosts currentLocale={currentLocale} />
+</BaseLayout>
