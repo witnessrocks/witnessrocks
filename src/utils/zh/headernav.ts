@@ -1,5 +1,9 @@
 export const navData = [
   {
+    text: "生命",
+    href: "/category/life/1/",
+  },
+  {
     text: "初信",
     href: "/category/new_believer/1/",
   },

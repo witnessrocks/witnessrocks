@@ -2,7 +2,7 @@ type CategoryMap = Record<string, string>;
 
 const zhCategories: CategoryMap = {
   初信: "new_believer",
-  生活: "life",
+  生命: "life",
   成长: "growth",
   关于我们: "aboutus",
 };
