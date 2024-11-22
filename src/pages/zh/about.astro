@@ -52,14 +52,17 @@ const tabs = [
           <div class="flex-1 overflow-hidden rounded-xl p-2 sm:p-1">
             <img class="rounded-xl" src={tab.image} />
           </div>
-          <div class="mb-5 flex-1 rounded-lg bg-white p-5 sm:px-2 lg:ml-5 lg:px-6">
+          <div class="mb-5 flex-1 rounded-lg bg-white p-5 dark:bg-neutral-700 dark:hover:bg-neutral-600 sm:px-2 lg:ml-5 lg:px-6">
             <div class="flex items-center justify-center">
-              <Icon name={tab.icon} class="size-8 text-gray-600" />
-              <span class="text-md flex-1 px-1 font-bold text-gray-600">
+              <Icon
+                name={tab.icon}
+                class="size-8 text-gray-600 dark:text-neutral-100"
+              />
+              <span class="text-md flex-1 px-1 font-bold text-gray-600 dark:text-neutral-100">
                 {tab.title}
               </span>
             </div>
-            <div class="mt-4">{tab.content}</div>
+            <div class="mt-4 dark:text-neutral-100">{tab.content}</div>
           </div>
         </div>
       ))
