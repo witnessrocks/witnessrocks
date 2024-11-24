@@ -10,7 +10,7 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://witness.rocks",
-  trailingSlash: "always",
+  trailingSlash: "ignore",
   prefetch: true,
   i18n: {
     defaultLocale: "en",
