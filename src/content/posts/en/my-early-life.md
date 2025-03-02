@@ -1,6 +1,6 @@
 ---
 title: My Early Life
-description: My mother once joked that I left a church service early, only to tell her later, "I didn’t feel free there." Like any child, I was restless, preferring play to sitting still for an hour or two.
+description: I believe that the state of faith in a family can really have a great impact on children. My mother didn't make me read scriptures or pray daily like a pastor or preacher, but she established a relationship with God for me through her own actions, allowing me to feel God's presence.。
 category:
   - growth
 tags:
@@ -11,32 +11,58 @@ coverAlt: Believe
 author: Li
 ---
 
-I was born on July 12 in the Gregorian calendar, a date I’ve always cherished because “7” and “12” are symbols of perfection in the Bible. I often see it as a mark of God’s special love for me.
+In 1987, my mother was unexpectedly diagnosed with Meniere's disease and couldn't get out of bed; she had to rely on others for care. At that time, my father was working in a construction team in Jinan, returning only once or twice every couple of weeks. My sister was just eight years old and still needed to go to school, so she didn't have the time to take care of my mother. My uncle asked his eldest daughter to come over with 200 yuan (which was already considered a lot) to help take care of my mother, cooking meals for her and feeding her.
 
-As I mentioned before, my father wasn’t particularly skilled in parenting, and he hardly paid much attention to us, let alone provided guidance. So, as a child, I mostly followed my mother. Apart from working in the fields, my mother’s primary activity was attending church gatherings. There was no Sunday school for kids, at least not in the villages around ours. So, when my mother went to services, I would sit beside her, listening to the sermons.
+My mother was only 35 years old at the time, and she thought that one shouldn't just wait to die; she wanted to find a way to get better. However, my father's monthly salary was only around 30 yuan, and as a farmer, my mother didn't earn much either, so there wasn't any savings in the family. Therefore, my father had to go borrow money.
 
-In rural church life, gatherings were often informal. One day people would meet in our village, the next we’d go to another, and on Sundays, sometimes, to a bigger church in town. My memories are full of following my mother to services in different villages. To be honest, I didn’t understand much then. My mother once laughed, recalling that I left a church service early, only to tell her later, "I didn’t feel free there." Like any child, I was restless, preferring play to sitting still for an hour or two.
+At that time, I hadn't even been born yet. In Shandong, which is a place where boys are highly valued, our family was essentially seen as childless. My father was also someone with not much ability and a short temper. It seemed like the relatives thought that if they lent us money, my father wouldn't be able to pay it back. After going around to several relatives, my father came back empty-handed.。
 
-Yet, none of this hindered God’s love and guidance in my life.
+In rural areas, neighbors are very familiar with each other and often visit each other. The family next door were my father's cousin's household, whom I called Uncle and Aunt. Aunt frequently came to our home for visits. After hearing about my mother's illness, one day she suddenly came over excitedly and told my mother that she heard of a church somewhere where people believe in Jesus. They say that if you believe in Jesus, your sickness will be healed. She suggested my mother try it.
 
-I remember when I was about three or four, a wedding took place in the village. My mother was asked to help make the bridal quilt, so I tagged along. While playing nearby, I dislocated my left arm, and I couldn’t lift it. A neighbor suggested taking me to a local bone-setter, but he wasn’t home. My mother calmly said, “Let’s wait and see.” So, everyone left me alone, and I sulked in discomfort. Later, perhaps needing to use the restroom, I stood up and accidentally fell. Miraculously, that fall reset my arm, and I could move it freely again. It was my first memory of witnessing God’s power firsthand.
+My mother thought, since she was just waiting to die at home anyway, she might as well give it a try.
 
-There was another time when my mother was chatting with a neighbor outside while holding me. Suddenly, my mother became anxious and insisted on heading home, leaving the neighbor behind. Just as we reached our door, we heard the neighbor scream. Rushing back, we found that a dog had lunged at her leg, leaving her bleeding heavily. God’s protection seemed to be with me time and again.
+So Aunt used the rural tricycle (地排车) to push my mother to the church in that village.
 
-I have countless memories like this, but one that remains vivid was in junior high. It was one night after evening self-study, and I was cycling home. Part of the road lacked streetlights, and in the distance, I saw a small light approaching—it seemed to be a motorcycle. I decided to overtake two friends riding ahead of me, moving quickly to the left. Just then, the motorcycle sped up, and before I knew it, we collided with a loud “bang.” For a moment, my mind went blank, thinking it was all over. However, instead of flying forward as physics might suggest, I was somehow lifted backward and landed gently. I stood up, unharmed, while my bike lay twisted into a “V” shape. The motorcyclist, too, was thrown off, groaning in pain. This incident left me with a profound sense of God’s love and power.
+Specifically what they talked about on that day, my mother doesn't remember clearly. The only thing she remembers is that the people there said that they are all sinners and need to confess their sins and repent, and then God will forgive them of all their sins and heal them. They also said that they should pray to God.
 
-From then on, I never doubted God’s presence, love, or strength because these experiences had made His reality undeniable to me. But, of course, God had other ways of teaching me as well.
+After returning home, my mother started praying to God, saying "God, I am a sinner, please save me."。
 
-As a child, swearing was almost inevitable, especially among boys. I used to follow suit until I realized that every time I cursed, a sore would appear on my heel, causing days of pain. I knew this was God’s discipline. In middle school, I slipped up again, immediately regretting it, not because of the words themselves but because I knew my heel would suffer. Sure enough, a sore appeared the next day.
+The next day, my mother recovered and was able to get out of bed and walk. A few days later, she fully recovered.
 
-Growing up in poverty, I was also quite tempted by petty gains—even to the point of stealing. I remember when remote-control cars were all the rage. While urban kids could afford to customize their cars, rural kids like us had to settle for cheaper, pre-made ones. I often went to a toy store in town that had a dedicated play area for remote-control cars. One day, I noticed a new car chassis in a corner, unattended. Pretending to play, I pocketed it and quickly left. For a few days, I was overjoyed, until my beloved car went missing at home. Eventually, I discovered who had taken it, but I was helpless. That experience taught me the pain of losing something precious, and I never stole again.
+From then on, my mother began to believe in Jesus and became the first Christian in our village.
 
-Through God’s love and discipline, I grew and gradually gained a better understanding of Him. These life experiences were like signposts, reminding me of God’s presence. But without the Bible’s teachings, these would have been mere coincidences or luck.
+Two years later, my mother became pregnant with me. Just before giving birth to me, there was a small incident: my mother and Aunt went to the market. On their way back, they were hit by someone riding a bicycle. Aunt was frightened and immediately grabbed that person, saying, "You've caused an accident today; did you know she is pregnant?" The person was also terrified upon hearing this. However, my mother felt it wasn't too serious, just having some stomach pain, so she let the person go.
 
-I grew up with my mother, who read the Bible to me every evening. Once I learned to read, I began reading on my own and, by age nine, could read her full traditional Chinese Bible independently. I was captivated by the Bible stories—Genesis, Exodus, the Kings and Prophets of the Old Testament, and the New Testament’s accounts of Jesus’ life and the apostles’ deeds. These stories accompanied me as I grew, instilling reverence and awe.
+They then went to our village midwife. After checking, the midwife said the baby's head was positioned correctly and advised going to the hospital immediately. My mother felt at ease and said, "Why go to the hospital? Everything is fine."
 
-However, life doesn’t always stay that way. As I grew older, I felt a change—fewer miracles, subtler discipline, and life’s hardships took center stage. Work became a struggle. While my classmates found jobs, I seemed to stumble from one failed opportunity to the next. My first job saw my colleagues resign one by one; my second job ended in layoffs; the third closed entirely after just two months. It was as if misfortune followed me wherever I went. “God, aren’t you a loving God? Don’t You bless those who believe in You?” I wondered.
+Indeed, everything turned out fine the next day.
 
-Romantic relationships weren’t smooth either. While others dated and married, my relationships always ended in heartbreak. I struggled to understand why the God who once protected and nurtured me felt so distant. The health of my family members also declined, and my parents, aging and ill, seemed to face one setback after another. My older sister’s health worsened, too. Watching other families thrive only made ours seem more fragile.
+Shortly after, I was born.
 
-For years, I searched for answers. I never doubted God’s existence or love, but I couldn’t understand why things had changed so drastically. Reflecting on myself, I saw many flaws—I was prideful, sharp-tongued, and defiant when criticized. I sinned regularly and even found pleasure in my failings.
+As mentioned earlier, my father was working in Jinan at that time, so he didn't have much time to spend with me. I mostly spent my time following my mother to church gatherings and listening to her read the Bible and pray with her. My faith formation is largely due to my mother's influence—99% of it. Since our family was poor, we had little time for television or other entertainment. Before starting school, most of my free time was spent going to church with my mother. I am grateful to God for those early years when I envied others who had televisions and entertainment. Now, I am more thankful that I learned about Jesus so young.
+
+I believe that the state of faith in a family can really have a great impact on children. My mother didn't make me read scriptures or pray daily like a pastor or preacher, but she established a relationship with God for me through her own actions, allowing me to feel His presence.
+
+To be honest, I actually don't like the atmosphere in the church. Because people often start praying and end up crying, and I feel that some pastors have such piercing eyes that make me uncomfortable. Once during a hall meeting, my mother stayed until the end, but I left early feeling unfree.
+
+Although I thought this way, God still granted me great blessings.
+
+When I was a couple of years old, the cousin's sister in our village got married. Since that cousin's mother was good friends with my mom, she invited my mom to help make quilts. While the adults were talking, I held onto my mom's arm and started playing, causing it to dislocate suddenly.
+
+They then had to take me to find someone who could set the bone, but for some reason, whether because that person wasn't at home or another reason, we didn't end up going. The adults went into the house to make quilts.
+
+Making quilts requires laying out a large space and everyone working together to sew them. With my arm in pain, I sat dejectedly on the side. After some time, wanting to use the bathroom, I stood up and walked towards it, accidentally falling down. When I got up again, I discovered that my arm was no longer dislocated. Excitedly, I shouted, "Look, my arm is healed."
+
+This was the first time I knew about God.
+
+Another time, when I was about 3 or 4 years old, my mom was chatting with a neighbor's auntie outside the house. During their conversation, my mom suddenly felt she needed to go home and said goodbye to that auntie before returning. Just as we reached the door but before opening it, we heard a woman's cries from behind the house. My mom quickly brought me back in; I saw the woman who had been chatting with us bleeding heavily from her leg while crying and cursing. It turned out that a dog had suddenly run out and bit her.
+
+Only then did my mom realize why she felt the need to go home earlier.
+
+As I grew older, I gradually began to understand what faith is all about and started praying along with my mom. But I can't remember how we prayed back then; the only thing I recall is that when I was sick as a child, my mom would ask whether I wanted to go to the hospital or pray. I mostly chose to pray.
+
+I am grateful for God's mercy because I've only had to receive intravenous treatment twice in my life, and other than minor injuries from being naughty, I haven't needed to visit the hospital much.。
+
+In third or fourth grade, I and my friends liked to go to the library to read books. One Saturday afternoon, we had planned to go together. I rode my bike, carrying one friend, and set off. That day, for some reason, I suddenly wanted to take a different route that wasn't the usual path. When we arrived at the library, I waited for a long time but didn't see the other friends. Only after they arrived did they tell me that on our way there, they had been robbed. Although there was no significant financial loss, it still scared us a lot, and all of our excitement to go to the library vanished.
+
+[To be continued]
